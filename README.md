@@ -55,7 +55,14 @@ Modelin başarısını belirleyen eğitim parametreleri aşağıda belirtilmişt
 
 ![Öğrenme Eğrisi](ogrenme_egrisi.gif?v=1)
 
-### Eğrisinin Yorumlanması:
+**Analiz:** 
+* **0 - 2000 Epoch:** Ajan dünyayı keşfederken yüksek cezalar alır.
+* **2000 - 7000 Epoch:** "Pusuya yatma" stratejisinin getirisini fark eder ve ödüller hızla artar.
+* **7000+ Epoch:** Model artık günün saatlerine göre en iyi park yerlerini ezberlemiş ve maksimum ödülde sabitlenmiştir.
+
+---
+
+### Öğrenme Eğrisinin Yorumlanması:
 Yukarıdaki grafik, Q-Learning ajanının 10.000 epoch boyunca aldığı toplam ödüllerin (reward) gelişimini göstermektedir.
 * **Başlangıç (Rastgele):** Eğitimin ilk aşamalarında ajan tamamen rastgele (`epsilon = 1.0`) hareket ettiği için sürekli yanlış katlarda bekler ve yüksek cezalar (eksi puanlar) alır.
 * **Tırmanış ve Keşif:** Epochlar ilerledikçe ajan hangi saatte hangi katta beklemenin daha mantıklı olduğunu fark eder ve eğri istikrarlı bir şekilde yukarı doğru ivmelenir.
