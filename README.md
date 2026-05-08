@@ -21,6 +21,36 @@ Q-Learning algoritması, bu gizli örüntüleri (hidden patterns) çözerek her 
 
 ---
 
+### Aksiyon Uzayı (Action Space)
+Asansörün her adımda seçebileceği **3 temel aksiyon** vardır:
+| Aksiyon ID | Tanım | Açıklama |
+| :--- | :--- | :--- |
+| **0** | Park Et (Bekle) | Mevcut katta kal ve çağrıyı bekle. |
+| **1** | Aşağı İn | Bir alt kata hareket et. |
+| **2** | Yukarı Çık | Bir üst kata hareket et. |
+
+### Ödül Mekanizması (Reward Function)
+Ajanın öğrenme sürecini yöneten ödül ve ceza puanları şöyledir:
+
+| Durum | Ödül / Ceza | Mantık |
+| :--- | :--- | :--- |
+| **Tam İsabet (Park)** | **+20** | Çağrı geldiğinde asansör zaten o kattaysa. |
+| **Uzaklık Cezası** | **-(Mesafe)** | Çağrılan kat ile bulunulan kat arasındaki her kat için ceza. |
+| **Hareket Maliyeti** | **-1** | Asansörün her kat değişimi (enerji harcaması) için ceza. |
+| **Duvar Cezası** | **-5** | En üstten yukarı veya en alttan aşağı gitmeye çalışırsa. |
+
+---
+
+## Hiperparametreler
+Modelin başarısını belirleyen eğitim parametreleri aşağıda belirtilmiştir:
+
+| Parametre | Değer | Açıklama |
+| :--- | :--- | :--- |
+| **Learning Rate ($\alpha$)** | 0.1 | Yeni bilgilerin eskilerin üzerine yazılma hızı. |
+| **Discount Factor ($\gamma$)** | 0.95 | Gelecekteki ödüllerin bugünkü önemi. |
+| **Epsilon ($\epsilon$)** | 1.0 $\to$ 0.01 | Keşif (Exploration) ve Sömürü (Exploitation) dengesi. |
+| **Epochs** | 10,000 | Toplam eğitim turu sayısı. |
+
 ##  Eğitim Süreci ve Öğrenme Eğrisi
 
 ![Öğrenme Eğrisi](ogrenme_egrisi.gif?v=1)
