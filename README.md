@@ -23,7 +23,7 @@ Q-Learning algoritması, bu gizli örüntüleri (hidden patterns) çözerek her 
 
 ##  Eğitim Süreci ve Öğrenme Eğrisi
 
-![Öğrenme Eğrisi](ogrenme_egrisi.gif)
+![Öğrenme Eğrisi](ogrenme_egrisi.gif?v=1)
 
 ### Eğrisinin Yorumlanması:
 Yukarıdaki grafik, Q-Learning ajanının 10.000 epoch boyunca aldığı toplam ödüllerin (reward) gelişimini göstermektedir.
@@ -35,7 +35,7 @@ Yukarıdaki grafik, Q-Learning ajanının 10.000 epoch boyunca aldığı toplam 
 
 ##  Asansör Simülasyonu
 
-![Asansör Simülasyonu](akilli_asansor.gif)
+![Asansör Simülasyonu](akilli_asansor.gif?v=1)
 
 ### Simülasyonun Yorumlanması:
 Eğitilmiş model 3 farklı zaman diliminde test edildiğinde, ajanın öğrendiği istatistiksel stratejiler şunlardır:
